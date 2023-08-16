@@ -87,7 +87,7 @@ const properties = [
     {
       "id": 5,
       "StreetAddress": "7515 Northaven Rd",
-      "City": "Dalla",
+      "City": "Dallas",
       "State": "TX",
       "ZipCode": "75038",
       "Photos":  [

@@ -38,10 +38,12 @@ const Banner = () => {
     videoRefs[currentSlide].current.addEventListener('ended', handleVideoEnd);
 
     return () => {
-      videoRefs[currentSlide].current.removeEventListener(
-        'ended',
-        handleVideoEnd
-      );
+      if (videoRefs[currentSlide].current) {
+        videoRefs[currentSlide].current.removeEventListener(
+          'ended',
+          handleVideoEnd
+        );
+      }
     };
   }, [currentSlide]);
 
@@ -68,11 +70,7 @@ const Banner = () => {
               </video>
               <div className='absolute top-40 left-40 text-white text-8xl font-luxury leading-tight'>
                 <div className='leading-none'>Your window to the  </div>
-                
                 <div className='mt-4 leading-none'>world's finest real estate</div>
-
-
-                {/* <div className='leading-none'>BROKERAGE</div> */}
               </div>
             </div>
           ))}

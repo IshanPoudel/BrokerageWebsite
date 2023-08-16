@@ -12,6 +12,7 @@ const Property = () => {
     }
     return result;
   };
+  
 
   const propertyChunks = chunkArray(properties, maxBoxesPerLine);
 

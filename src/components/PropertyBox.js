@@ -1,16 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const PropertyBox = ({ property }) => {
   const { StreetAddress, City, State, ZipCode, Price, Photos } = property;
   const slug = `${StreetAddress}-${City}-${State}`.toLowerCase().replace(/\s+/g, "-");
+  
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
+  const handlePropertyClick = () => {
+    // Navigate to the PropertyDetails route with the state object
+    navigate(`/property/${slug}`, { state: { property } });
+  };
 
   return (
-    <Link
-      to={{
-        pathname: `/property/${slug}`,
-        state: { property } // Pass the property as a state object
-      }}
+    <div
+      onClick={handlePropertyClick} // Call the handlePropertyClick function on click
       className="property-box shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 flex flex-col p-6"
     >
       <div className="relative pb-[85%] w-100">
@@ -27,7 +31,7 @@ const PropertyBox = ({ property }) => {
         </p>
         <p className="mt-3 text-xl font-semibold">{Price}</p>
       </div>
-    </Link>
+    </div>
   );
 };
 

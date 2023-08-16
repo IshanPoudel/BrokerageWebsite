@@ -1,101 +1,103 @@
-import React from 'react'
-import {ImGithub} from 'react-icons/im'
-import { FaFacebookF , FaTwitter,FaInstagram, FaYoutube , FaHome } from 'react-icons/fa'
-import {MdLocationOn} from 'react-icons/md'
-import {BsPersonFill , BsPaypal} from 'react-icons/bs'
-import { LogoLight , PaymentLogo } from '../assets'
+import React from 'react';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-const Footer = () => {
+
+export default function Footer() {
   return (
-    <div className='bg-black text-[#949494] py-10 font-titleFont'> {/* Adjusted the padding from py-20 to py-10 */}
-    <div className='max-w-screen-xl mx-auto grid grid-cols-4 ' >
-      {/*================= Logo and Payment options start here==================== */}
-      <div className='flex flex-col gap-4'> {/* Adjusted the gap from gap-7 to gap-4 */}
-        <img className='w-12 h-12'  alt='logoLight' />
-        <p className='text-white text-sm tracking-wide'>Made Using React</p>
-        <img className='w-64 h-32'  alt='PaymentLogo' />
-        <div className='flex gap-5 text-lg text-gray-400'>
-          <a href="https://www.facebook.com/your-facebook-url" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF className='hover:text-white duration-300 cursor-pointer' />
-          </a>
-          <a href="https://www.twitter.com/your-twitter-url" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className='hover:text-white duration-300 cursor-pointer' />
-          </a>
-          <a href="https://www.instagram.com/your-instagram-url" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className='hover:text-white duration-300 cursor-pointer' />
-          </a>
-          <a href="https://www.youtube.com/your-youtube-url" target="_blank" rel="noopener noreferrer">
-            <FaYoutube className='hover:text-white duration-300 cursor-pointer' />
-          </a>
-       </div>
+    <footer className="bg-gray-100 dark:bg-gray-800 text-neutral-600 dark:text-neutral-200">
+      <div className="container mx-auto px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Social Media Links */}
+          <div className="md:col-span-1">
+            <h6 className="text-lg font-semibold mb-4 uppercase">Connect With Us</h6>
+            <div className="flex space-x-4">
+              <a href="#" className="text-blue-500 hover:text-blue-600 transition duration-300">
+                <FaFacebook size={24} />
+              </a>
+              <a href="#" className="text-blue-500 hover:text-blue-600 transition duration-300">
+                <FaInstagram size={24} />
+              </a>
+              <a href="#" className="text-blue-500 hover:text-blue-600 transition duration-300">
+                <FaYoutube size={24} />
+              </a>
+            </div>
+          </div>
 
-        
-      </div>
-      {/*================= Logo and Payment options end here==================== */}
-      {/*================= Business details  start here ======================== */}
-      <div >
-        <h2 className='text-2xl font-semibold text-white mb-4'> Locate us </h2>
-        <div className='text-base flex flex-col gap-2'>
-            <p>Dallas Business Center</p>
-            <p> Contact us: +1 405-981-8094  </p>
-            <p> E-mail: customer-service@swfitbuy.com</p>
+          {/* Mailing List Form */}
+          <div className="md:col-span-2 mt-8 md:mt-0">
+            <h6 className="text-lg font-semibold mb-4 uppercase">Join Our Mailing List</h6>
+            <form className="flex space-x-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-52 py-2 px-4 border rounded-l-md focus:outline-none focus:ring focus:border-blue-300"
+              />
+              <button
+                type="submit"
+                className="bg-blue-500 text-white py-2 px-4 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          {/* Location and Contact */}
+          <div className="md:col-span-1 mt-8 md:mt-0">
+            <h6 className="text-lg font-semibold mb-4 uppercase">Contact Us</h6>
+            <p className="text-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-neutral-400 mr-2 inline-block"
+                viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M10 0a9.923 9.923 0 00-7.064 2.936c-3.896 3.895-3.896 10.213 0 14.108a9.923 9.923 0 007.064 2.936c2.563 0 5.127-.978 7.063-2.936 3.896-3.895 3.896-10.213 0-14.108A9.923 9.923 0 0010 0zm0 18a8 8 0 100-16 8 8 0 000 16z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              New York, NY 10012, US
+            </p>
+            <p className="text-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-neutral-400 mr-2 inline-block"
+                viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M10 0a9.923 9.923 0 00-7.064 2.936c-3.896 3.895-3.896 10.213 0 14.108a9.923 9.923 0 007.064 2.936c2.563 0 5.127-.978 7.063-2.936 3.896-3.895 3.896-10.213 0-14.108A9.923 9.923 0 0010 0zm0 18a8 8 0 100-16 8 8 0 000 16z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              reliant@realestate.com
+            </p>
+            <p className="text-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-neutral-400 mr-2 inline-block"
+                viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M10 0a9.923 9.923 0 00-7.064 2.936c-3.896 3.895-3.896 10.213 0 14.108a9.923 9.923 0 007.064 2.936c2.563 0 5.127-.978 7.063-2.936 3.896-3.895 3.896-10.213 0-14.108A9.923 9.923 0 0010 0zm0 18a8 8 0 100-16 8 8 0 000 16z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              +1 (123) 456-7890
+            </p>
+          </div>
         </div>
-      
-      </div>
-      {/*================= Business details end here ======================== */}
-      {/*================= My Account details  start here ======================== */}
-      <div>
-        <h2 className='text-2xl font-semibold text-white mb-4'> Profile </h2>
-        <div className='flex flex-col gap-3  '>
-            <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
-                <span>
-                    <BsPersonFill/>
 
-                </span>{" "}
-                My Account
-            </p> 
-            <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
-                <span>
-                    <BsPaypal/>
-
-                </span>{" "}
-                Checkout
-            </p> 
-            <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
-                <span>
-                    <FaHome/>
-
-                </span>{" "}
-                Order Tracking
-            </p> 
-            <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
-                <span>
-                    <MdLocationOn/>
-
-                </span>{" "}
-                Help&Support
-            </p> 
-         
+        {/* Copyright */}
+        <div className="mt-12 border-t border-neutral-300 dark:border-neutral-700 pt-6 flex flex-col md:flex-row items-center justify-center md:justify-between">
+          <span>&copy; {new Date().getFullYear()} All rights reserved</span>
+          <a
+            href="https://tailwind-elements.com/"
+            className="text-blue-500 hover:text-blue-600 transition duration-300 font-semibold">
+            Reliant Real Estate
+          </a>
         </div>
-
-
       </div>
-      {/*================= Subscription Starts here======================== */}
-      <div className='flex flex-col justify-center gap-2' >
-        <p > Subscribe for great deals!</p>
-        <input className='bg-transparent border px-4 py-2 text-sm' placeholder='Email' type='text'/>
-        <button className='text-sm border text-white border-t-1 hover:bg-gray-900 active:bg-white active:text-black'> Subscribe</button>
-         
-      </div>
-    
-
-
-
-
-    </div>
-  </div>
-  
-  )
+    </footer>
+  );
 }
-
-export default Footer
