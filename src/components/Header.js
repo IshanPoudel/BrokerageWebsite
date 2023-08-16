@@ -1,27 +1,52 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { logoBrokerage } from '../assets';
 
-
-
 const Header = () => {
-    return (
-        <header className="bg-gray-900 text-white shadow-lg">
-          <div className="container mx-auto flex items-center justify-between py-4">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                   <img className='w-14' src={logoBrokerage} alt='BrokerageLogo' />
-                </div>
-            </div>
-            <div className="space-x-4">
-              <a href="#" className="hover:text-gray-300">Buy</a>
-              <a href="#" className="hover:text-gray-300">Sell</a>
-              <a href="#" className="hover:text-gray-300">Listings</a>
-              <a href="#" className="hover:text-gray-300">Contact</a>
-            </div>
+  return (
+    <header className="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between py-4">
+        <div className="flex items-center">
+          <div className="text-3xl font-bold">
+            <img className='w-40' src={logoBrokerage} alt='BrokerageLogo' />
           </div>
-        </header>
-      );
-}
+        </div>
+        <div className="space-x-4">
+          <Link
+            to="#"
+            className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
+          >
+            Buy
+          </Link>
+          <Link
+            to="#"
+            className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
+          >
+            Sell
+          </Link>
+          <Link
+            to="#"
+            className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
+          >
+            Listings
+          </Link>
+          <Link
+            to="#"
+            className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
+          >
+            Agents
+          </Link>
 
-export default Header
+          <Link
+            to="#"
+            className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

@@ -3,12 +3,16 @@
 
 import React from 'react'
 import Banner from '../components/Banner'
+import Testimonials from '../components/Testimonials'
+import Featured from '../components/Featured'
 
 const Home = () => {
   return (
     <div>
-        Home
+        
         <Banner/>
+        <Testimonials/>
+        <Featured/>
     </div>
     
   )
