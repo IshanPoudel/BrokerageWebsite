@@ -15,18 +15,18 @@ const Header = () => {
           </div>
         </div>
         <div className="space-x-4">
-          <Link
+          {/* <Link
             to="#"
             className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
           >
             Buy
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             to="#"
             className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"
           >
             Sell
-          </Link>
+          </Link> */}
           <Link
             to="/listings"
             className="hover:text-gray-300 text-3xl px-3 py-2 border-2 border-transparent rounded-md transition duration-300 ease-in-out focus:outline-none focus:border-gray-300"

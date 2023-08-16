@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram , FaYoutube , FaFacebook , FaLinkedin  } from 'react-icons/fa';
 
 const AgentDetails = () => {
   const { agentId } = useParams();
@@ -30,7 +30,18 @@ const AgentDetails = () => {
       <div className="flex-none mr-8">
         <img src={agentData.image} alt={agentData.name} className="w-64 h-auto rounded-lg shadow-lg" />
         <a href={agentData.social} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
-          <FaInstagram className="text-purple-500 text-2xl hover:text-purple-600 duration-300" />
+            <div className="flex space-x-4">
+              <FaInstagram className="text-purple-500 text-2xl hover:text-purple-600 duration-300" />
+              <FaFacebook className="text-blue-500 text-2xl hover:text-blue-600 duration-300" />
+              <FaYoutube className="text-red-500 text-2xl hover:text-red-600 duration-300" />
+              <FaLinkedin className="text-blue-500 text-2xl hover:text-blue-600 duration-300" />
+            </div>
+                    
+
+          
+
+
+
         </a>
       </div>
       <div className="flex-grow">
